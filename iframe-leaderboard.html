@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Classification Hackathon Leaderboard</title>
+    <link rel="stylesheet" href="leaderboard.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Leaderboard Section -->
+        <div class="leaderboard">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Team</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                    <!-- Leaderboard data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const leaderboardBody = document.getElementById('leaderboard-body');
+        
+        function updateLeaderboard() {
+            if (!leaderboardBody) return;
+
+            fetch('http://127.0.0.1:5000/api/leaderboard')
+                .then(response => response.ok ? response.json() : Promise.reject('Network error'))
+                .then(data => {
+                    leaderboardBody.innerHTML = data.map((team, index) => `
+                        <tr>
+                            <td>${index + 1}</td>
+                            <td>${team.name}</td>
+                            <td>${team.score}</td>
+                        </tr>
+                    `).join('');
+                })
+                .catch(error => {
+                    console.error('Error updating leaderboard:', error);
+                    leaderboardBody.innerHTML = `<tr><td colspan="3">Error loading leaderboard</td></tr>`;
+                });
+        }
+        
+        // Initial load and periodic updates
+        updateLeaderboard();
+        setInterval(updateLeaderboard, 30000); // Update every 30 seconds
+    });
+    </script>
+</body>
+</html>

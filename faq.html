@@ -1,0 +1,328 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Data Nexus AI Hackathon FAQ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  
+  <!-- Custom CSS (if needed) -->
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Data Nexus AI Hackathon</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Main</a></li>
+          <li class="nav-item"><a class="nav-link" href="overview.html">Instructions</a></li>
+          <li class="nav-item"><a class="nav-link" href="submit.html">Submit</a></li>
+          <li class="nav-item"><a class="nav-link" href="leaderboard.html">Leaderboard</a></li>
+          <li class="nav-item active"><a class="nav-link" href="faq.html">FAQ/Rules</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1>FAQ</h1>
+  </section>
+
+  <!-- Main Content -->
+  <div class="content-section">
+    <div class="faq-intro mb-4">
+      <h2>Data Nexus AI Hackathon FAQ</h2>
+      <p><strong>Version:</strong> Feb 17, 2025</p>
+      <p>
+        Please email us your questions and we will update the FAQ.<br>
+        Aaron Satko @ <a href="mailto:asatko@elon.edu">asatko@elon.edu</a><br>
+      </p>
+      <h4>Table of Contents</h4>
+      <ul>
+        <li><a class="toc-link" href="#faq1">How does the competition work?</a></li>
+        <li><a class="toc-link" href="#faq2">Are there any rules or requirements?</a></li>
+        <li><a class="toc-link" href="#faq3">Do I need previous ML experience to enter the competition?</a></li>
+        <li><a class="toc-link" href="#faq4">When will it start?</a></li>
+        <li><a class="toc-link" href="#faq5">When will it end?</a></li>
+        <li><a class="toc-link" href="#faq6">When can I sign up?</a></li>
+        <li><a class="toc-link" href="#faq7">Who are the "winners"?</a></li>
+        <li><a class="toc-link" href="#faq8">Who can I share the competition data with?</a></li>
+        <li><a class="toc-link" href="#faq9">Can I add people to my team after I sign up?</a></li>
+        <li><a class="toc-link" href="#faq10">Can team names be changed?</a></li>
+        <li><a class="toc-link" href="#faq11">Are there any data with answers available?</a></li>
+        <li><a class="toc-link" href="#faq12">The sample dataset only contains 20 songs. Is that enough?</a></li>
+      </ul>
+    </div>
+
+    <!-- FAQ Search -->
+    <input type="text" id="faqSearch" placeholder="Search FAQ..." />
+
+    <!-- FAQ Accordion -->
+    <div id="faqAccordion" class="accordion">
+      <!-- FAQ 1 -->
+      <div class="card">
+        <div class="card-header" id="heading1">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#faq1" aria-expanded="true" aria-controls="faq1">
+              How does the competition work?
+            </button>
+          </h2>
+        </div>
+        <div id="faq1" class="collapse" aria-labelledby="heading1" data-parent="#faqAccordion">
+          <div class="card-body">
+            <p>
+              In this hackathon, participants are provided with a sample dataset of 20 songs with known genres. Your task is to craft a prompt that, when used with an LLM such as ElonGPT, will accurately categorize songs into their respective genres. The final evaluation is performed on a blind test set of 100 songs.
+            </p>
+            <p>
+              Scoring is based on the number of correct genre classifications, and the format of your answer is critical. This challenge is designed to test your skills in prompt engineering and your ability to generalize from a small sample.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 2 -->
+      <div class="card">
+        <div class="card-header" id="heading2">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#faq2" aria-expanded="false" aria-controls="faq2">
+              Are there any rules or requirements?
+            </button>
+          </h2>
+        </div>
+        <div id="faq2" class="collapse" aria-labelledby="heading2" data-parent="#faqAccordion">
+          <div class="card-body">
+            <p>
+              You can use any model or computational approach available, as long as your solution is fully automated and reproducible. Manual corrections or human-assisted outputs are not permitted.
+            </p>
+            <p>
+              Your submission must consist solely of your engineered prompt for song categorization. You will have access to a sample dataset of 20 songs (testable using ElonGPT), while the blind test set of 100 songs will be used for scoring.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 3 -->
+      <div class="card">
+        <div class="card-header" id="heading3">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#faq3" aria-expanded="false" aria-controls="faq3">
+              Do I need previous ML experience to enter the competition?
+            </button>
+          </h2>
+        </div>
+        <div id="faq3" class="collapse" aria-labelledby="heading3" data-parent="#faqAccordion">
+          <div class="card-body">
+            <p>
+              No previous machine learning or programming experience is required! This hackathon is centered on creative prompt engineering and is designed to be accessible to participants from diverse backgrounds. The sample dataset is provided in an Excel format to facilitate ease of use.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 4 -->
+      <div class="card">
+        <div class="card-header" id="heading4">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#faq4" aria-expanded="false" aria-controls="faq4">
+              When will it start?
+            </button>
+          </h2>
+        </div>
+        <div id="faq4" class="collapse" aria-labelledby="heading4" data-parent="#faqAccordion">
+          <div class="card-body">
+            <p>
+              The competition will begin on February 17th, 2025, when the sample dataset of 20 songs will be made available for testing with ElonGPT.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 5 -->
+      <div class="card">
+        <div class="card-header" id="heading5">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#faq5" aria-expanded="false" aria-controls="faq5">
+              When will it end?
+            </button>
+          </h2>
+        </div>
+        <div id="faq5" class="collapse" aria-labelledby="heading5" data-parent="#faqAccordion">
+          <div class="card-body">
+            <p>
+              The last day for submissions will be March 16th, 2025. Final evaluations will be conducted on the blind test set of 100 songs.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 6 -->
+      <div class="card">
+        <div class="card-header" id="heading6">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#faq6" aria-expanded="false" aria-controls="faq6">
+              When can I sign up?
+            </button>
+          </h2>
+        </div>
+        <div id="faq6" class="collapse" aria-labelledby="heading6" data-parent="#faqAccordion">
+          <div class="card-body">
+            <p>
+              You can sign up any time before the final submission deadline. Early registration is encouraged to give you ample time to develop your prompt.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 7 -->
+      <div class="card">
+        <div class="card-header" id="heading7">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#faq7" aria-expanded="false" aria-controls="faq7">
+              Who are the "winners"?
+            </button>
+          </h2>
+        </div>
+        <div id="faq7" class="collapse" aria-labelledby="heading7" data-parent="#faqAccordion">
+          <div class="card-body">
+            <p>
+              The top 3 teams, based on the number of correct genre classifications, will win prizes. Winners may also be invited to showcase their prompt engineering approach during a special session at the Data Nexus conference.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 8 -->
+      <div class="card">
+        <div class="card-header" id="heading8">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#faq8" aria-expanded="false" aria-controls="faq8">
+              Who can I share the competition data with?
+            </button>
+          </h2>
+        </div>
+        <div id="faq8" class="collapse" aria-labelledby="heading8" data-parent="#faqAccordion">
+          <div class="card-body">
+            <p>
+              You can share the competition data only with members of your team. By participating, you agree not to share the provided datasets with anyone outside your team until after the competition concludes.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 9 -->
+      <div class="card">
+        <div class="card-header" id="heading9">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#faq9" aria-expanded="false" aria-controls="faq9">
+              Can I add people to my team after I sign up?
+            </button>
+          </h2>
+        </div>
+        <div id="faq9" class="collapse" aria-labelledby="heading9" data-parent="#faqAccordion">
+          <div class="card-body">
+            <p>
+              Yes, you can add team members by emailing the organizer at <a href="mailto:ai@elon.edu">ai@elon.edu</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 10 -->
+      <div class="card">
+        <div class="card-header" id="heading10">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#faq10" aria-expanded="false" aria-controls="faq10">
+              Can team names be changed?
+            </button>
+          </h2>
+        </div>
+        <div id="faq10" class="collapse" aria-labelledby="heading10" data-parent="#faqAccordion">
+          <div class="card-body">
+            <p>
+              Yes, you can change your team name by emailing the organizer at <a href="mailto:ai@elon.edu">ai@elon.edu</a>. Clever puns are welcome!
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 11 -->
+      <div class="card">
+        <div class="card-header" id="heading11">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#faq11" aria-expanded="false" aria-controls="faq11">
+              Are there any data with answers available?
+            </button>
+          </h2>
+        </div>
+        <div id="faq11" class="collapse" aria-labelledby="heading11" data-parent="#faqAccordion">
+          <div class="card-body">
+            <p>
+              No. The correct genres for the blind test set of 100 songs will not be provided. You will only have access to the sample dataset of 20 songs with known genres for developing your prompt.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 12 -->
+      <div class="card">
+        <div class="card-header" id="heading12">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#faq12" aria-expanded="false" aria-controls="faq12">
+              The sample dataset only contains 20 songs. Is that enough?
+            </button>
+          </h2>
+        </div>
+        <div id="faq12" class="collapse" aria-labelledby="heading12" data-parent="#faqAccordion">
+          <div class="card-body">
+            <p>
+              Yes, the small sample dataset is intentional. It challenges participants to design prompts that generalize effectively to a larger blind test set of 100 songs. Your success depends on your ability to extrapolate from limited examples.
+            </p>
+          </div>
+        </div>
+      </div>
+    <!-- End of Accordion -->
+    </div>
+
+  <!-- Footer -->
+  <footer class="footer-custom">
+    <p>&copy; 2025 Data Nexus AI Hackathon</p>
+  </footer>
+
+  <!-- JavaScript: jQuery, Popper.js, Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- FAQ Search Filter Script -->
+  <script>
+    document.getElementById('faqSearch').addEventListener('input', function() {
+      const filter = this.value.toLowerCase();
+      const cards = document.querySelectorAll('#faqAccordion .card');
+      
+      cards.forEach(function(card) {
+        const question = card.querySelector('.card-header button').textContent.toLowerCase();
+        card.style.display = (question.indexOf(filter) > -1) ? "" : "none";
+      });
+    });
+  </script>
+
+  <!-- Smooth Scroll & Expand TOC Links Script -->
+  <script>
+    document.querySelectorAll('.toc-link').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const collapseElement = document.querySelector(targetId);
+        if (collapseElement) {
+          // Expand the FAQ card (if not already expanded)
+          $(collapseElement).collapse('show');
+          // Scroll to the card header by locating the closest card element
+          const card = collapseElement.closest('.card');
+          if (card) {
+            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+```

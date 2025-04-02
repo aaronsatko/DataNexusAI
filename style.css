@@ -1,0 +1,283 @@
+/* ========== COLOR VARIABLES ========== */
+:root {
+    --primary-red: #73000a;
+    --secondary-red: #b59a57;
+    --neutral-gray: #8A878B;
+    --cool-blue: #00506E;
+    --white: #ffffff;
+    --black: #333333;
+    --light-gray: #f5f5f5;
+  }
+  
+  /* ========== GLOBAL STYLES ========== */
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--white);
+    color: var(--black);
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+  
+  /* ========== NAVIGATION ========== */
+  .navbar-custom {
+    background-color: var(--white);
+    border-bottom: 3px solid var(--primary-red);
+    padding: 1rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary-red) !important;
+  }
+  
+  .navbar-nav .nav-link {
+    color: var(--cool-blue) !important;
+    font-weight: 500;
+    margin: 0 0.75rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: var(--secondary-red) !important;
+  }
+  
+  .nav-item.active .nav-link {
+    color: var(--secondary-red) !important;
+    font-weight: bold;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    background-color: transparent;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: var(--primary-red);
+    border-radius: 3px;
+    padding: 5px;
+  }
+  
+  /* ========== HERO SECTION ========== */
+  .hero-section {
+    background: linear-gradient(135deg, var(--primary-red) 40%, var(--secondary-red) 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 4rem 1rem;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--white);
+    color: var(--primary-red);
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-btn:hover {
+    background-color: var(--neutral-gray);
+    color: var(--white);
+  }
+  
+  /* ========== CONTENT SECTIONS ========== */
+  .content-section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--light-gray);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container-custom {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  /* ========== BUTTONS ========== */
+  .btn-custom {
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary-custom {
+    background-color: var(--primary-red);
+    color: var(--white);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .btn-primary-custom:hover {
+    background-color: var(--secondary-red);
+  }
+  
+  .btn-secondary-custom {
+    background-color: var(--cool-blue);
+    color: var(--white);
+  }
+  
+  .btn-secondary-custom:hover {
+    background-color: var(--neutral-gray);
+  }
+  
+  /* ========== CARDS & BOXES ========== */
+  .callout-box {
+    background-color: var(--light-gray);
+    border-left: 5px solid var(--cool-blue);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .callout-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .callout-box h3 {
+    color: var(--primary-red);
+    margin-bottom: 1rem;
+  }
+  
+  .callout-box p {
+    color: var(--black);
+  }
+  
+  .highlight-box {
+    background-color: var(--light-gray);
+    border-left: 5px solid var(--cool-blue);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* ========== FORM ELEMENTS ========== */
+  .form-group label {
+    font-weight: 500;
+    color: var(--black);
+  }
+  
+  .form-control {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem;
+  }
+  
+  .form-control:focus {
+    border-color: var(--cool-blue);
+    box-shadow: 0 0 0 0.2rem rgba(0, 80, 110, 0.25);
+  }
+  
+  #faqSearch {
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+  
+  /* ========== TABLE STYLES ========== */
+  .table-responsive {
+    overflow-x: auto;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .table-leaderboard th {
+    background-color: var(--cool-blue);
+    color: var(--white);
+  }
+  
+  /* ========== FOOTER ========== */
+  .footer-custom {
+    background-color: var(--white);
+    padding: 1rem;
+    text-align: center;
+    color: var(--black);
+    border-top: 3px solid var(--primary-red);
+    margin-top: 2rem;
+  }
+  
+  /* ========== SPECIAL COMPONENTS ========== */
+  /* FAQ Accordion */
+  .card-header {
+    background-color: var(--cool-blue);
+    color: var(--white);
+  }
+  
+  .card-header button {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .card-body {
+    background-color: var(--white);
+    color: var(--black);
+  }
+  
+  .faq-intro p, .faq-intro li {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .faq-intro a {
+    color: var(--cool-blue);
+    text-decoration: none;
+  }
+  
+  .faq-intro a:hover {
+    color: var(--secondary-red);
+    text-decoration: underline;
+  }
+  
+  /* Chart containers */
+  #chart-container, #progressChart-container {
+    width: 90%;
+    max-width: 800px;
+    aspect-ratio: 4 / 3;  /* Maintains a 4:3 ratio */
+    margin: auto;
+  }
+  
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  /* MathJax container */
+  mjx-container[jax="CHTML"] {
+    max-width: 100%;
+    white-space: normal;
+  }

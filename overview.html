@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Data Nexus AI Hackathon - Song Categorization Challenge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- MathJax configuration to enable automatic line breaks -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      chtml: {
+        linebreaks: { automatic: true, width: "100%" }
+      }
+    };
+  </script>
+  <!-- Load MathJax after the configuration -->
+  <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Data Nexus AI Hackathon</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Main</a></li>
+          <li class="nav-item active"><a class="nav-link" href="overview.html">Overview</a></li>
+          <li class="nav-item"><a class="nav-link" href="submit.html">Submit</a></li>
+          <li class="nav-item"><a class="nav-link" href="leaderboard.html">Leaderboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ/Rules</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <div class="container">
+      <h1>LLM Prompt Engineering for Song Categorization</h1>
+      <p>Create effective prompts to enable LLMs to accurately classify songs by genre. Format matters.</p>
+    </div>
+  </section>
+
+  <div class="container content-section">
+    <div class="highlight-box">
+      <h3>Competition Overview</h3>
+      <p>
+        Welcome to the Data Nexus AI Hackathon: Song Categorization Challenge. In this competition, teams are tasked with crafting the perfect prompt that will enable a Large Language Model to correctly classify songs by genre.
+      </p>
+      <p>
+        Participants will be provided with a sample dataset containing 20 song examples, which you can test using <a href="https://www.elongpt.com">ElonGPT</a>. A blind test set of 100 samples will be used to evaluate your submission, with scoring based on the number of genres correctly identified.
+      </p>
+      <p>
+        The challenge is designed not only to test your ability to engineer effective prompts but also to emphasize that even slight differences in formatting can have a significant impact on the LLM's output.
+      </p>
+      <p>
+        Teams will compete during the competition period, and the top 3 teams will win prizes.
+      </p>
+    </div>
+
+    <div class="highlight-box">
+      <h3>Instructions</h3>
+      <ol>
+        <li>
+          <strong>Team Registration:</strong> Sign up on the <a href="signup.html">Sign-up Page</a> to receive your unique team token. This token is required for both submissions and dataset downloads.
+        </li>
+        <br>
+        <li>
+          <strong>Dataset Download:</strong>
+          <p>Enter your team token below and click the button to download the sample dataset (dev_dataset.zip) containing 20 song examples.</p>
+          <form id="downloadForm">
+            <div class="form-group">
+              <label for="userToken">Team Token:</label>
+              <input type="text" id="userToken" name="token" class="form-control" placeholder="Enter your team token" required>
+            </div>
+            <button type="submit" class="btn btn-primary-custom">Download Sample Dataset</button>
+          </form>
+          <div id="downloadMessage" class="mt-2"></div>
+        </li>
+
+        <strong><a href="test_dataset.zip"><br>Update 3/9/2025: Download Blind Test Dataset Here</a></strong>
+        <br><br>
+        <li>
+          <strong>Explore the Dataset:</strong> Unzip the downloaded file and review its contents to familiarize yourself with the song examples and associated metadata.
+        </li>
+        <br>
+        <li>
+          <strong>Develop Your Approach:</strong> Use your preferred tools to craft a prompt that effectively instructs the LLM to categorize songs by genre. (Note: manually classifying songs is impractical for the test dataset.)
+        </li>
+        <br>
+        <li>
+          <strong>Submission:</strong> Submit your final prompt or prompt-engineered solution for scoring at the <a href="submit.html">Submission Page</a>
+        </li>
+        <br>
+        <li>
+          <strong>Leaderboard & History:</strong> Check your performance on the <a href="leaderboard.html">Leaderboard</a> and review your submission history on the <a href="submissions.html">Submissions Page</a>.
+        </li>
+      </ol>
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="signup.html" class="btn btn-primary-custom btn-lg">Sign Up Your Team Now</a>
+    </div>
+  </div>
+
+  <footer class="footer-custom">
+    <p>&copy; 2025. Data Nexus AI Hackathon. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Use full version of jQuery for AJAX functionality -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+$(document).ready(function(){
+  $('#downloadForm').on('submit', function(e) {
+    e.preventDefault();
+    var token = $('#userToken').val().trim();
+    if (token === "") {
+      $('#downloadMessage').html('<div class="alert alert-danger">Please enter your team token.</div>');
+      return;
+    }
+    $('#downloadMessage').html('<div class="alert alert-info">Processing download...</div>');
+
+    $.ajax({
+      url: 'download.php',
+      method: 'POST',
+      data: { token: token },
+      xhrFields: { responseType: 'blob' },
+      success: function(data, textStatus, xhr) {
+        var contentType = xhr.getResponseHeader('Content-Type');
+        // If a zip is returned, process the download
+        if (contentType && contentType.indexOf('application/zip') !== -1) {
+          var disposition = xhr.getResponseHeader('Content-Disposition');
+          var filename = "development_dataset.zip";
+          if (disposition && disposition.indexOf('filename=') !== -1) {
+            var filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+            var matches = filenameRegex.exec(disposition);
+            if (matches != null && matches[1]) {
+              filename = matches[1].replace(/['"]/g, '');
+            }
+          }
+          // 'data' is already a Blob
+          var link = document.createElement('a');
+          link.href = window.URL.createObjectURL(data);
+          link.download = filename;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          $('#downloadMessage').html('');
+        } else {
+          // In case of an error message sent as a blob, read it as text.
+          var reader = new FileReader();
+          reader.onload = function() {
+            $('#downloadMessage').html('<div class="alert alert-danger">' + reader.result + '</div>');
+          };
+          reader.readAsText(data);
+        }
+      },
+      error: function(xhr, textStatus, errorThrown) {
+        $('#downloadMessage').html('<div class="alert alert-danger">Invalid Team Token</div>');
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
