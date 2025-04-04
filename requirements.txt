@@ -9,3 +9,7 @@ motor
 aiohttp
 pandas
 openpyxl
+hypercorn
+quart
+rich
+uvicorn

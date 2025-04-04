@@ -121,18 +121,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         // Path to the songs dataset on the server
-        const filePath = 'backends/data/Prompt Engineering Songs.xlsx';
+        const filePath = 'backends/data/Prompt Engineering Songs.xlsx'; // TODO - change to relative path + csv
         
+        const api_path = 'http://127.0.0.1:5000/api/evaluate-songs';
+
         // Call the evaluate-songs API
-        fetch('http://127.0.0.1:5000/api/evaluate-songs', {
+        fetch(api_path, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
                 team_name: teamName,
-                file_path: filePath,
-                prompt: inputText
+                user_text: inputText
             })
         })
         .then(response => {
@@ -151,15 +152,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 outputResult.innerHTML = `
                     <div class="score-summary">
-                        <h3>Score: ${data.score}/100</h3>
+                        <h3>Score: ${scorePercentage.toFixed(3)}/100</h3>
                         <div class="score-bar-container">
                             <div class="score-bar" style="width: ${scorePercentage}%; background-color: ${scoreColor}"></div>
                         </div>
-                        <p>Correct classifications: ${data.correct}/${data.total}</p>
+                        <p>Last updated: ${data.last_updated}</p>
                     </div>
-                    <div class="evaluation-feedback">
-                        ${marked.parse(data.feedback)}
-                    </div>
+                    
                 `;
                 
                 // Update the leaderboard immediately

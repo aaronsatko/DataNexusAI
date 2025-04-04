@@ -1,0 +1,68 @@
+2025-04-04 13:34:08,264 - __main__ - INFO - Testing handshake endpoint
+2025-04-04 13:34:08,267 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2025-04-04 13:34:08,270 - urllib3.connectionpool - DEBUG - http://127.0.0.1:5000 "GET /api/handshake HTTP/1.1" 200 61
+2025-04-04 13:34:08,270 - __main__ - INFO - Handshake response: {'message': 'Backend is running', 'status': 'success'}
+2025-04-04 13:34:08,270 - __main__ - INFO - Testing async chat endpoint
+2025-04-04 13:34:08,271 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2025-04-04 13:34:09,214 - urllib3.connectionpool - DEBUG - http://127.0.0.1:5000 "POST /async_chat HTTP/1.1" 200 169
+2025-04-04 13:34:09,215 - __main__ - INFO - Async chat response: {'response': "Hello! I'm just a computer program, so I don't have feelings, but I'm here and ready to help you. How can I assist you today?", 'status': 'success'}
+2025-04-04 16:02:00,844 - __main__ - INFO - Testing handshake endpoint
+2025-04-04 16:02:00,845 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2025-04-04 16:02:00,849 - urllib3.connectionpool - DEBUG - http://127.0.0.1:5000 "GET /api/handshake HTTP/1.1" 200 61
+2025-04-04 16:02:00,849 - __main__ - INFO - Handshake response: {'message': 'Backend is running', 'status': 'success'}
+2025-04-04 16:02:00,849 - __main__ - INFO - Testing evaluation endpoint
+2025-04-04 16:02:00,850 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2025-04-04 16:02:09,508 - urllib3.connectionpool - DEBUG - http://127.0.0.1:5000 "POST /api/evaluate-songs HTTP/1.1" 200 91
+2025-04-04 16:02:09,508 - __main__ - INFO - Evaluation response: {'accuracy': 0.5, 'team_name': 'test_team', 'updated_time': '2025-04-04 16:02:09'}
+2025-04-04 16:02:52,410 - __main__ - INFO - Testing handshake endpoint
+2025-04-04 16:02:52,412 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2025-04-04 16:02:53,349 - urllib3.connectionpool - DEBUG - http://127.0.0.1:5000 "GET /api/handshake HTTP/1.1" 200 61
+2025-04-04 16:02:53,350 - __main__ - INFO - Handshake response: {'message': 'Backend is running', 'status': 'success'}
+2025-04-04 16:02:53,350 - __main__ - INFO - Testing evaluation endpoint
+2025-04-04 16:02:53,351 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2025-04-04 16:03:04,760 - urllib3.connectionpool - DEBUG - http://127.0.0.1:5000 "POST /api/evaluate-songs HTTP/1.1" 200 85
+2025-04-04 16:03:04,761 - __main__ - INFO - Evaluation response: {'last_updated': '2025-04-04 16:03:04', 'name': 'test_team', 'score': 0.515}
+2025-04-04 16:05:57,382 - __main__ - INFO - Testing handshake endpoint
+2025-04-04 16:05:57,384 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2025-04-04 16:05:57,388 - urllib3.connectionpool - DEBUG - http://127.0.0.1:5000 "GET /api/handshake HTTP/1.1" 404 207
+2025-04-04 16:05:57,388 - __main__ - ERROR - Handshake test failed: Expecting value: line 1 column 1 (char 0)
+2025-04-04 16:06:00,985 - __main__ - INFO - Testing handshake endpoint
+2025-04-04 16:06:00,987 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2025-04-04 16:06:00,989 - urllib3.connectionpool - DEBUG - http://127.0.0.1:5000 "GET /api/handshake HTTP/1.1" 404 207
+2025-04-04 16:06:00,990 - __main__ - ERROR - Handshake test failed: Expecting value: line 1 column 1 (char 0)
+2025-04-04 16:06:10,264 - __main__ - INFO - Testing handshake endpoint
+2025-04-04 16:06:10,266 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2025-04-04 16:06:10,433 - urllib3.connectionpool - DEBUG - http://127.0.0.1:5000 "GET /api/handshake HTTP/1.1" 404 207
+2025-04-04 16:06:10,434 - __main__ - ERROR - Handshake test failed: Expecting value: line 1 column 1 (char 0)
+2025-04-04 16:06:21,577 - __main__ - INFO - Testing handshake endpoint
+2025-04-04 16:06:21,579 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2025-04-04 16:06:22,263 - urllib3.connectionpool - DEBUG - http://127.0.0.1:5000 "GET /api/hi HTTP/1.1" 200 61
+2025-04-04 16:06:22,264 - __main__ - INFO - Handshake response: {'message': 'Backend is running', 'status': 'success'}
+2025-04-04 16:06:22,264 - __main__ - INFO - Testing evaluation endpoint
+2025-04-04 16:06:22,265 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2025-04-04 16:06:31,121 - urllib3.connectionpool - DEBUG - http://127.0.0.1:5000 "POST /api/evaluate-songs HTTP/1.1" 200 85
+2025-04-04 16:06:31,122 - __main__ - INFO - Evaluation response: {'last_updated': '2025-04-04 16:06:31', 'name': 'test_team', 'score': 0.535}
+2025-04-04 16:09:19,477 - __main__ - INFO - Testing handshake endpoint
+2025-04-04 16:09:19,479 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2025-04-04 16:09:19,483 - urllib3.connectionpool - DEBUG - http://127.0.0.1:5000 "GET /api/hi HTTP/1.1" 200 61
+2025-04-04 16:09:19,484 - __main__ - INFO - Handshake response: {'message': 'Backend is running', 'status': 'success'}
+2025-04-04 16:09:19,484 - __main__ - INFO - Testing evaluation endpoint
+2025-04-04 16:09:19,485 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2025-04-04 16:09:27,754 - urllib3.connectionpool - DEBUG - http://127.0.0.1:5000 "POST /api/evaluate-songs HTTP/1.1" 200 85
+2025-04-04 16:09:27,755 - __main__ - INFO - Evaluation response: {'last_updated': '2025-04-04 16:09:27', 'name': 'test_team', 'score': 0.545}
+2025-04-04 16:10:17,724 - __main__ - INFO - Testing handshake endpoint
+2025-04-04 16:10:17,726 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2025-04-04 16:10:17,729 - urllib3.connectionpool - DEBUG - http://127.0.0.1:5000 "GET /api/hi HTTP/1.1" 200 61
+2025-04-04 16:10:17,730 - __main__ - INFO - Handshake response: {'message': 'Backend is running', 'status': 'success'}
+2025-04-04 16:10:17,730 - __main__ - INFO - Testing evaluation endpoint
+2025-04-04 16:10:17,731 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2025-04-04 16:10:27,608 - urllib3.connectionpool - DEBUG - http://127.0.0.1:5000 "POST /api/evaluate-songs HTTP/1.1" 200 85
+2025-04-04 16:10:27,608 - __main__ - INFO - Evaluation response: {'last_updated': '2025-04-04 16:10:27', 'name': 'test_team', 'score': 0.535}
+2025-04-04 16:10:32,958 - __main__ - INFO - Testing handshake endpoint
+2025-04-04 16:10:32,961 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2025-04-04 16:10:32,964 - urllib3.connectionpool - DEBUG - http://127.0.0.1:5000 "GET /api/hi HTTP/1.1" 200 61
+2025-04-04 16:10:32,964 - __main__ - INFO - Handshake response: {'message': 'Backend is running', 'status': 'success'}
+2025-04-04 16:10:32,965 - __main__ - INFO - Testing evaluation endpoint
+2025-04-04 16:10:32,966 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2025-04-04 16:10:42,418 - urllib3.connectionpool - DEBUG - http://127.0.0.1:5000 "POST /api/evaluate-songs HTTP/1.1" 200 84
+2025-04-04 16:10:42,420 - __main__ - INFO - Evaluation response: {'last_updated': '2025-04-04 16:10:42', 'name': 'test_team', 'score': 0.54}
