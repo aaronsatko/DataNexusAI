@@ -10,7 +10,7 @@
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
   />
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles/style.css" />
   
   <!-- MathJax configuration to enable automatic line breaks -->
   <script>
@@ -72,53 +72,14 @@
       </p>
     </div>
 
-    <div class="highlight-box">
-      <h3>Instructions</h3>
-      <ol>
-        <li>
-          <strong>Team Registration:</strong> Sign up on the <a href="signup.html">Sign-up Page</a> to receive your unique team token. This token is required for both submissions and dataset downloads.
-        </li>
-        <br>
-        <li>
-          <strong>Dataset Download:</strong>
-          <p>Enter your team token below and click the button to download the sample dataset (dev_dataset.zip) containing 20 song examples.</p>
-          <form id="downloadForm">
-            <div class="form-group">
-              <label for="userToken">Team Token:</label>
-              <input type="text" id="userToken" name="token" class="form-control" placeholder="Enter your team token" required>
-            </div>
-            <button type="submit" class="btn btn-primary-custom">Download Sample Dataset</button>
-          </form>
-          <div id="downloadMessage" class="mt-2"></div>
-        </li>
-
-        <strong><a href="test_dataset.zip"><br>Update 3/9/2025: Download Blind Test Dataset Here</a></strong>
-        <br><br>
-        <li>
-          <strong>Explore the Dataset:</strong> Unzip the downloaded file and review its contents to familiarize yourself with the song examples and associated metadata.
-        </li>
-        <br>
-        <li>
-          <strong>Develop Your Approach:</strong> Use your preferred tools to craft a prompt that effectively instructs the LLM to categorize songs by genre. (Note: manually classifying songs is impractical for the test dataset.)
-        </li>
-        <br>
-        <li>
-          <strong>Submission:</strong> Submit your final prompt or prompt-engineered solution for scoring at the <a href="submit.html">Submission Page</a>
-        </li>
-        <br>
-        <li>
-          <strong>Leaderboard & History:</strong> Check your performance on the <a href="leaderboard.html">Leaderboard</a> and review your submission history on the <a href="submissions.html">Submissions Page</a>.
-        </li>
-      </ol>
-    </div>
-
     <div class="text-center mt-4">
-      <a href="signup.html" class="btn btn-primary-custom btn-lg">Sign Up Your Team Now</a>
+      <a href="submit.html" class="btn btn-primary-custom btn-lg">Start Prompting</a>
     </div>
   </div>
 
+  <!-- Footer -->
   <footer class="footer-custom">
-    <p>&copy; 2025. Data Nexus AI Hackathon. All Rights Reserved.</p>
+    <p>&copy; 2025 ElonAI</p>
   </footer>
 
   <!-- Use full version of jQuery for AJAX functionality -->

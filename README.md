@@ -10,26 +10,6 @@ interactive web application that allows participants to:
   4. Share the competition via QR codes
 The application evaluates how effectively a prompt can guide an AI model to correctly classify songs by genre.
 
-Project Structure
-
-    DataNexus/
-    ├── backends/
-    │   ├── app.py                  # Flask backend server
-    │   ├── chat.py                 # OpenAI API integration
-    │   ├── database.py             # Database interactions
-    │   ├── async_chat.py           # Async OpenAI API integration
-    │   ├── async_database.py       # Async database interactions
-    │   ├── evaluate_submission.py  # Song classification evaluation
-    │   ├── data/
-    │   │   ├── leaderboard.xlsx    # Leaderboard data storage
-    │   │   ├── Prompt Engineering Songs.xlsx  # Song dataset
-    │   │   └── evaluations/        # Stored evaluation results
-    │   └── requirements.txt        # Python dependencies
-    ├── datanexus.js                # Frontend JavaScript
-    ├── dataNexus.html              # Main HTML interface
-    ├── styles.css                  # Styling for the interface
-    └── .env                        # Environment variables (API keys)
-
 Features
   Real-time Prompt Evaluation: Tests prompts against a dataset of song lyrics and genres
   Scoring System: Calculates scores based on correct genre classifications
@@ -48,14 +28,6 @@ Technology Stack
      QRCode.js for QR code generation
      pandas for data manipulation
 
-Installation
-
-Prerequisites
-  Python 3.8+
-  Node.js (for development)
-  OpenAI API key (set in system environmental variables)
-
 Backend Setup
   pip install -r requirements.txt
-  run: python app.py
-  Open dataNexus.html in a web browser
+  run: python app_asyn.py
