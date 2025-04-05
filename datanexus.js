@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const teamMembers = document.getElementById('team-members')?.value;
         const inputText = document.getElementById('inputText')?.value;
         
-        if (!teamName || !teamMembers || !inputText) {
+        if (!teamName || !inputText) {
             alert('Please fill out all required fields.');
             return;
         }
