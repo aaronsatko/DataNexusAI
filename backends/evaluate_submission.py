@@ -14,7 +14,7 @@ API_KEY = os.getenv("OPENAI_API_KEY")
 MODEL = "gpt-3.5-turbo"
 
 # Load the target dataframe on memory
-path = r"backends\data\target_df.csv"
+path = os.path.join("data", "target_df.csv")
 target_df = pd.read_csv(path)
 
 # Function to get the prediction for a specific lyric
